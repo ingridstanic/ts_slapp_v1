@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,20 @@
     <title>ts_slapp_v1</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <form id="searchJourney">
+        <div class="formGroup">
+          <label for="origin">Från:</label>
+          <input type="text" required placeholder="Alvik" id="origin" />
+        </div>
+        <div class="formGroup">
+          <label for="destination">Till:</label>
+          <input type="text" required placeholder="Huddinge" id="destination" />
+        </div>
+        <button>Sök resa</button>
+      </form>
+      <div id="journeyContainer"></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
