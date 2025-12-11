@@ -1,0 +1,41 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: $padding-md;
+  gap: $padding-lg;
+  color: $text_bg;
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    line-height: $line-height;
+    border-radius: 5px;
+    background-color: $BG_elevated;
+    border: none;
+    color: $text_bg;
+    font-size: $fontsize;
+  }
+}
+
+button {
+  height: $button-size;
+  background-color: $primary;
+  color: $text_primary;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: $hover_primary;
+  }
+
+  &:focus {
+    outline: 4px solid $focus_ring_secondary;
+  }
+}
